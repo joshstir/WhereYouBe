@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.parse.Parse;
+import com.parse.ParseUser;
 import com.parse.ui.ParseLoginBuilder;
 
 
@@ -50,7 +51,15 @@ public class MainActivity extends ActionBarActivity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
         ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
-        startActivityForResult(builder.build(), 0);
+
+        //check if the user is logged in
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null){
+
+        }
+        else{
+            startActivityForResult(builder.build(), 0);
+        }
     }
 
     @Override

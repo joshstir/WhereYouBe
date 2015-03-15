@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jos.sss.whereyoube" >
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    package="com.jos.sss.whereyoube">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".WhereYouBeApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat"
-        android:name=".WhereYouBeApplication">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
             android:name=".MyDispatchActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!--        <activity
+                    android:name=".MainActivity"
+                    android:label="@string/app_name" >
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>
+                </activity>-->
+        <activity
+            android:name=".MainWhereYouBeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"></activity>
         <activity
             android:name="com.parse.ui.ParseLoginActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop">
             <meta-data
                 android:name="com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED"
-                android:value="true"/>
+                android:value="true" />
         </activity>
     </application>
 
