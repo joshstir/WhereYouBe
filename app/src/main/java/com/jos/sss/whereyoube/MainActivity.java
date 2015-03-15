@@ -18,6 +18,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.parse.Parse;
+import com.parse.ui.ParseLoginBuilder;
+
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -45,6 +48,9 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        ParseLoginBuilder builder = new ParseLoginBuilder(MainActivity.this);
+        startActivityForResult(builder.build(), 0);
     }
 
     @Override
