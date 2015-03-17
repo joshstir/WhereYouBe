@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:WhereYouBeApplication="http://schemas.android.com/apk/res-auto">
-
-    <item
-        android:id="@+id/action_add"
-        android:icon="@drawable/ic_action_add_person"
-        android:orderInCategory="100"
-        android:title="Add"
-        WhereYouBeApplication:showAsAction="always" />
     <item
         android:id="@+id/action_search"
         WhereYouBeApplication:actionViewClass="android.support.v7.widget.SearchView"
         android:icon="@drawable/ic_action_search"
         android:title="Search"
         WhereYouBeApplication:showAsAction="always"></item>
-
     <item
         android:id="@+id/action_settings"
-        android:title="Settings"></item>
+        android:title="Settings">
+    </item>
     <item
         android:id="@+id/action_logout"
-        android:title="Logout"></item>
+        android:title="Logout">
+    </item>
 
 </menu>
